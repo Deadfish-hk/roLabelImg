@@ -119,16 +119,25 @@ Windows
 
 Download and setup `Python 2.6 or
 later <https://www.python.org/downloads/windows/>`__,
-`PyQt4 <https://www.riverbankcomputing.com/software/pyqt/download>`__
+`PyQt5 <https://www.riverbankcomputing.com/software/pyqt/download>`__
 and `install lxml <http://lxml.de/installation.html>`__.
+
+.. code::
+
+        conda create -n rolabellmg python=3.9
+        pip install lxml
+        pip install pyqt5-tools
+        cd ./rolabellmg-master
+        pyrcc5 -o resources.py resources.qrc
 
 Open cmd and go to `roLabelImg <#roLabelimg>`__ directory
 
 .. code::
 
-    pyrcc4 -o resources.py resources.qrc
+    conda activate rolabellmg
+    cd ./rolabellmg-master
     python roLabelImg.py
-    python roLabelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
+
 
 Use Docker
 ~~~~~~~~~~~~~~~~~
